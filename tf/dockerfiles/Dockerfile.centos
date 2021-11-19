@@ -52,3 +52,5 @@ ARG TENSORFLOW_WHLS=.
 ADD ${TENSORFLOW_WHLS} /tmp/pip3
 RUN python3 -m pip install --no-cache-dir /tmp/pip3/*${TF_PACKAGE}*.whl && \
     rm -rf /tmp/pip3/*${TF_PACKAGE}*.whl
+
+ADD import-onednn.sh /
