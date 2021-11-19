@@ -14,7 +14,7 @@ should be set properly.
 
 Once the script is run, a container like below for example is created:
 ```
-bitnami/intel-optimized-tensorflow:nightly-avx512-devel-mkl
+bitnami/intel-optimized-tensorflow:nightly-icx-server-devel-mkl
 ```
 and the wheels will be stored at: `tensorflow_whls/<TF_BUILD_VERSION>/python<PY_VERSION>.
 
@@ -35,7 +35,7 @@ bitnami/intel-optimized-tensorflow   master-avx512-debian   6c3b1c8feff0   7 min
 # Test the wheel and container
 Once the container is build, you can run the following command to test if Intel® oneDNN is present:
 ```
-$ docker run --rm bitnami/intel-optimized-tensorflow:master-avx512-debian /bin/bash "import-onednn.sh"
+$ docker run --rm bitnami/intel-optimized-tensorflow:master-icx-server-debian /bin/bash "import-onednn.sh"
 oneDNN optimizations enabled: True
 PASS: Intel® oneAPI Deep Neural Network Library(Intel® oneDNN) is enabled
 ```

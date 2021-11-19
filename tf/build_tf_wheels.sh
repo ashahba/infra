@@ -44,10 +44,10 @@ pushd ${TENSORFLOW_SRCS}/${TF_DOCKER_BUILD_DEVEL_BRANCH}/tensorflow/tools/ci_bui
 popd
 
 TEMP_CONTAINER_NAME="temp-intel-devel-mkl"
-docker run --name ${TEMP_CONTAINER_NAME} ${TF_DOCKER_BUILD_IMAGE_NAME}:${TF_DOCKER_BUILD_VERSION}-avx512-devel-mkl /bin/true
-docker cp ${TEMP_CONTAINER_NAME}:/tmp/pip3 ${TENSORFLOW_WHLS}/${TF_DOCKER_BUILD_DEVEL_BRANCH}/python${PY_VERSION}
+docker run --name ${TEMP_CONTAINER_NAME} ${TF_DOCKER_BUILD_IMAGE_NAME}:${TF_DOCKER_BUILD_VERSION}-icx-server-devel-mkl /bin/true
+docker cp ${TEMP_CONTAINER_NAME}:/tmp/pip3 ${TENSORFLOW_WHLS}
 docker rm -f ${TEMP_CONTAINER_NAME}
 
-echo "TensorFlow wheel has been successfully built and saved at: ${TENSORFLOW_WHLS}/${TF_DOCKER_BUILD_DEVEL_BRANCH}"
+echo "TensorFlow wheel has been successfully built and saved at: ${TENSORFLOW_WHLS}/pip3"
 
 set +xe
