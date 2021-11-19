@@ -1,0 +1,4 @@
+**/tensorflow_srcs
+**/tensorflow_whls
+**/tmp_whls
+*.log
