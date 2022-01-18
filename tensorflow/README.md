@@ -1,8 +1,8 @@
 # Build TensorFlow wheels from source
-The script [build_tf_wheels.sh](/tf/build_tf_wheels.sh) provides an easy way to build the wheels for a given version of TensorFlow.
+The script [build_tf_wheels.sh](/tensorflow/build_tf_wheels.sh) provides an easy way to build the wheels for a given version of TensorFlow.
 
 This script takes several input parameters but only a few should be modified by end users, which are
-collected in [common_env.sh](/tf/common_env.sh) script:
+collected in [common_env.sh](/tensorflow/common_env.sh) script:
 - `PY_VERSION`: The version of the wheel to be build. Currently 3.7, 3.8 or 3.9 are supported.
 Please keep in mind that depending on which OS will be used to install the Wheel on, this parameter
 should be set properly.
@@ -19,9 +19,9 @@ bitnami/intel-optimized-tensorflow:nightly-icx-server-devel-mkl
 and the wheels will be stored at: `tensorflow_whls/<TF_BUILD_VERSION>/python<PY_VERSION>.
 
 # Build TensorFlow Containers with the wheels from previous steps pre-installed
-The script [build_tf_containers.sh](/tf/build_tf_containers.sh) provides a reference an easy way to build the containers.
+The script [build_tf_containers.sh](/tensorflow/build_tf_containers.sh) provides a reference an easy way to build the containers.
 Again most parameters should be left intact. Please also note that some parameters are delivered through
-[common_env.sh](/tf/common_env.sh) script.
+[common_env.sh](/tensorflow/common_env.sh) script.
 
 There are currently 3 Dockerfiles provided.
 Please keep in mind that `CentOS 8` and `Ubuntu 20.04` container build commands are commented out,
